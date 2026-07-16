@@ -1,1 +1,27 @@
-
+{
+  "name": "zenit-x-mini",
+  "version": "1.0.0",
+  "description": "ZENIT X MINI - Professional WhatsApp MD Bot",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "whatsapp",
+    "baileys",
+    "md",
+    "zenit",
+    "mini-bot"
+  ],
+  "author": "ZENIT",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
