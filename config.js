@@ -1,15 +1,21 @@
-import dotenv from "dotenv";
+require("dotenv").config();
 
-dotenv.config();
+module.exports = {
+    bot: {
+        name: process.env.BOT_NAME || "ZENIT X MINI",
+        prefix: process.env.PREFIX || ".",
+        mode: process.env.MODE || "public"
+    },
 
-const config = {
-  BOT_NAME: process.env.BOT_NAME || "ZENIT X BOT",
-  OWNER_NAME: process.env.OWNER_NAME || "ZENIT",
-  OWNER_NUMBER: process.env.OWNER_NUMBER || "",
-  PREFIX: process.env.PREFIX || ".",
-  MODE: process.env.MODE || "public",
-  PORT: process.env.PORT || 3000,
-  VERSION: "1.0.0"
+    owner: {
+        number: process.env.OWNER_NUMBER || ""
+    },
+
+    server: {
+        port: Number(process.env.PORT) || 3000
+    },
+
+    session: {
+        path: process.env.SESSION_DIR || "./session"
+    }
 };
-
-export default config;
