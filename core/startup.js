@@ -1,12 +1,15 @@
 import banner from "./banner.js";
 import logger from "./logger.js";
+import { loadPlugins } from "./loader.js";
 
-export default function startup() {
+export default async function startup(){
+
     banner();
 
-    logger.success("ZENIT X BOT Booting...");
-    logger.info("Loading Core System...");
     logger.info("Loading Plugins...");
-    logger.info("Loading Configuration...");
-    logger.success("Core Loaded Successfully.");
+
+    await loadPlugins();
+
+    logger.success("System Ready.");
+
 }
